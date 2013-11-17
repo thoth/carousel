@@ -8,8 +8,8 @@ $this->Html
 	->addCrumb(__('Carousels'), array('controller' => 'carousels', 'action' => 'index'))
 	;
 
-if (!empty($this->data['Carousels']['id'])) {
-	$crumb = $this->data['Carousels']['title'];
+if (!empty($this->data['Carousel']['id'])) {
+	$crumb = $this->data['Carousel']['title'];
 } else {
 	$crumb = __('Add');
 }
@@ -33,9 +33,7 @@ $this->Html->addCrumb($crumb, $this->here);
 			<div id="site-basic" class="tab-pane">
 		  	<?php
 				$this->Form->inputDefaults(array(
-					'label' => false,
 					'class' => 'span10',
-					'placeholder' => true,
 				));
 				echo $this->Form->input('id'); 
 				echo $this->Form->input('title');

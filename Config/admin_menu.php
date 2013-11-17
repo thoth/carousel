@@ -26,3 +26,16 @@ CroogoNav::add('carousel', array(
 		),
 	)
 ));
+
+
+
+	CroogoNav::add('settings.children.carousel', array(
+		'title' => 'Carousel',
+		'url' => array(
+			'admin' => true,
+			'plugin' => 'settings',
+			'controller' => 'settings',
+			'action' => 'prefix',
+			'Carousel',
+		),
+	));

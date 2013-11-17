@@ -31,3 +31,11 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('.carousel').carousel({
+			interval: <?php echo Configure::read('Carousel.carousel_rotation_interval')*1000 ?>
+		});
+	});
+</script>

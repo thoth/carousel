@@ -38,6 +38,7 @@ class CarouselsComponent extends Component {
 		$this->controller = $controller;
 		if (!isset($controller->request->params['admin']) && !isset($controller->request->params['requested'])) {
 
+/*
 		    $controller->loadModel('Carousel');
 		    $this->carouselsForLayout = $controller->Carousel->find(
 		    	'all', 
@@ -47,7 +48,9 @@ class CarouselsComponent extends Component {
 		    		)
 		    	)
 		    );
+*/
 		    //$controller->set(compact('carousels'));
+			$controller->set('carousels_for_layout', ClassRegistry::init('Carousel.Carousel')->find('all', array('conditions'=>array('NOW() BETWEEN start_date AND end_date'))));
 
 
 			//$this->carousels();
@@ -61,7 +64,7 @@ class CarouselsComponent extends Component {
  * @return void
  */
 	public function beforeRender(Controller $controller) {
-		$controller->set('carousels_for_layout', $this->carouselsForLayout);
+		//$controller->set('carousels_for_layout', $this->carouselsForLayout);
 	}
 
 }
