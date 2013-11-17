@@ -38,7 +38,7 @@ class CarouselActivation {
 		@unlink(TMP . 'cache' . DS . 'models/cake_model_' . ConnectionManager::getSourceName($db). '_' . $db->config["database"] . '_list');
 		$db->listSources();
 
-		$controller->Setting->write('Carousel.carousel_rotation_interval','2000',array('description' => 'Rotation Interval','editable' => 1));
+		$controller->Setting->write('Carousel.carousel_rotation_interval','2',array('description' => 'Rotation Interval (sec)','editable' => 1));
 
 	}
 
